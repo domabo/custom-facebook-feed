@@ -1001,6 +1001,22 @@ function display_cff($atts) {
                         
                     }
                 }
+                
+                /* PICTURE */
+                
+                $picture = $news->picture;
+                
+                 if(stristr(@$picture, '_s.'))
+                 {
+                    $picture = str_replace('_s.', '_n.', @$picture);
+                   }
+
+                   if(stristr(@$picture, 'url='))
+                         {
+                             parse_str($picture, $picturearr);
+                               if($picturearr['url'])
+                                  $picture = $picturearr['url'];
+                            }
 
                 /* VIDEO */
 
@@ -1085,8 +1101,7 @@ function display_cff($atts) {
                     //DATE ABOVE
                     if ($cff_show_date && $cff_date_position == 'above') $cff_post_item .= $cff_date;
                     //IMAGE
-                    $photo = $news->picture;
-                    $cff_post_item .= "<img src='{$photo}'/>"; 
+                    $cff_post_item .= "<img src='{$picture}'/>"; 
                     //POST TEXT
                     if($cff_show_text) $cff_post_item .= $cff_post_text;
                     //DESCRIPTION
