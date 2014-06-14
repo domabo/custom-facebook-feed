@@ -618,7 +618,7 @@ function events_cff($atts) {
             if ( strlen($event_time) == 24 ) $event_time = substr($event_time, 0, -5);
             if (!empty($event_time))
             {
-                $cff_sortTime=event_time;
+                $cff_sortTime=$event_time;
                 $dateTime = strtotime($event_time);
 
                 $cff_event_date = '<p class="cff-date" '.$cff_event_date_styles.'>' . cff_eventdate($dateTime, $cff_event_date_formatting, $cff_event_date_custom) . '</p>';
