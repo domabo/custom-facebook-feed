@@ -2,7 +2,7 @@
 /*** LAYOUT ***/
 /**************/
 
-time.icon
+time.cff-icon
 {
   font-size: 1em; /* change icon size */
   display: block;
@@ -16,7 +16,7 @@ time.icon
   overflow: hidden;
 }
 
-time.icon *
+time.cff-icon *
 {
   display: block;
   width: 100%;
@@ -26,7 +26,7 @@ time.icon *
   text-align: center;
 }
 
-time.icon strong
+time.cff-icon strong
 {
   position: absolute;
   top: 0;
@@ -37,14 +37,14 @@ time.icon strong
   box-shadow: 0 2px 0 #fd9f1b;
 }
 
-time.icon em
+time.cff-icon em
 {
   position: absolute;
   bottom: 0.3em;
   color: #fd9f1b;
 }
 
-time.icon span
+time.cff-icon span
 {
   width: 100%;
   font-size: 2.8em;
