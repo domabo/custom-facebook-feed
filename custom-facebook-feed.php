@@ -988,10 +988,20 @@ function display_cff($atts) {
                         isset( $event_object->start_time ) ? $event_time = $event_object->start_time : $event_time = '';
                         //If timezone migration is enabled then remove last 5 characters
                         if ( strlen($event_time) == 24 ) $event_time = substr($event_time, 0, -5);
-                        if (!empty($event_time)) $cff_event_date = '<p class="cff-date" '.$cff_event_date_styles.'>' . cff_eventdate(strtotime($event_time), $cff_event_date_formatting, $cff_event_date_custom) . '</p>';
+                        if (!empty($event_time))
+                        {
+                            
+                        $dateTime = strtotime($event_time);
+                        
+                        $cff_event_date = '<p class="cff-date" '.$cff_event_date_styles.'>' . cff_eventdate($dateTime, $cff_event_date_formatting, $cff_event_date_custom) . '</p>';
+                        
+                        $cff_event_date_img = '<time datetime="' . date('c', $dateTime). ' class="icon"><em>' . date('l', $dateTime) . '</em><strong>'. date('F', $dateTime) . '</strong><span>' . date('j', $dateTime) . '</span></time>';
+                        
+                        }
                         //EVENT
                         //Display the event details
                         $cff_event .= '<div class="cff-details">';
+                        $cff_event .= $cff_event_date_img;
                         //show event date above title
                         if ($cff_event_date_position == 'above') $cff_event .= $cff_event_date;
                         //Show event title
@@ -1007,6 +1017,7 @@ function display_cff($atts) {
                         if ($picture){
                         $cff_event .= '<img src="'.$picture.'">';
                         }
+                        
                         
                         //Show event details
                         if ($cff_show_event_details){
