@@ -1099,9 +1099,15 @@ function display_cff($atts) {
                           $likes = array_values($news->likes->data);
                           $cff_like.=$likes[0]->name.", ";
                             $cff_like.=$likes[1]->name." ";
-                            if ($cff_like_count > 3)
+                            if ($cff_like_count > 13)
                             {
-                                 $cff_like.="and ".($cff_like_count-2)." others like this.";
+                              $cff_like.="and ".($cff_like_count-2)." others like this.";
+                             }
+                            
+                            elseif ($cff_like_count > 3)
+                            {
+                                $cff_like.="and ".$convert_digit($cff_like_count-2)." others like this.";
+                   
                             } else
                                 {
                                  $cff_like.="and one other like this.";
@@ -1278,6 +1284,24 @@ function cff_wrap_span_callback($matches) {
         $url_short = $url_full;
     }
     return "<span class='cff-break-word'>$url_short</span>";
+}
+
+
+function convertDigit($digit)
+{
+   switch($digit)
+   {
+      case "0": return "zero";
+      case "1": return "one";
+      case "2": return "two";
+      case "3": return "three";
+      case "4": return "four";
+      case "5": return "five";
+      case "6": return "six";
+      case "7": return "seven";
+      case "8": return "eight";
+      case "9": return "nine";
+   }
 }
 
 //2013-04-28T21:06:56+0000
