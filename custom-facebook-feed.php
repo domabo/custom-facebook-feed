@@ -1098,7 +1098,7 @@ function display_cff($atts) {
                     {
                       foreach ($news->likes->data as $like )
                       {
-                          $cff_like.=$like->name.", "
+                          $cff_like.=$like->name.", ";
                       }
                       $cff_like.=" and ".($cff_like_count-2)." others like this.";
                     } elseif ($cff_like_count == 2)
