@@ -189,8 +189,9 @@
 /* Feed events */
 #cff .cff-details{
   padding: 10px 0 0 0;
-  overflow:hidden;
-  display:block;
+  overflow: hidden;
+  display: block;
+  width: 100%;
 }
 #cff .cff-details-container{
   display: block;
