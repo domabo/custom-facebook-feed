@@ -1137,7 +1137,7 @@ function display_cff($atts) {
          
                     }
                     $likes_count = count($news->likes->data);
-                           $cff_post_item.$likes_count;
+                    $cff_post_item.= $likes_count;
           
                     $cff_post_item.="</p></div>";
                     
