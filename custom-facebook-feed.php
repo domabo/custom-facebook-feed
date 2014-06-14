@@ -1135,14 +1135,19 @@ function display_cff($atts) {
                     
                     
                     $cff_likebox="";
-                    if(!empty($cff_like))
+                    if(!empty($cff_like) | !empty($cff_comment))
                     {
                     $cff_likebox.="<div class='cff-comments-box light' >";
+                       if(!empty($cff_like))
+                 {
                     $cff_likebox.="<p class='cff-comment-likes cff-likes' style='color:#;background-color:#;'><span class='cff-icon'></span>";
                     $cff_likebox.=$cff_like."</p>";
-                    $cff_likebox.="<p class='cff-comment-likes cff-comments' style='color:#;background-color:#;'><span class='cff-icon'></span>";
-                     $cff_likebox.=$cff_comment."</p>";
-
+                 }
+                    if(!empty($cff_comment))
+                    {
+                       $cff_likebox.="<p class='cff-comment-likes cff-comments' style='color:#;background-color:#;'><span class='cff-icon'></span>";
+                       $cff_likebox.=$cff_comment."</p>";
+                    }
                     $cff_likebox.="</div>";
                     }
                     
