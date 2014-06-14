@@ -1100,10 +1100,10 @@ function display_cff($atts) {
                     if($cff_show_author) $cff_post_item .= $cff_author;
                     //DATE ABOVE
                     if ($cff_show_date && $cff_date_position == 'above') $cff_post_item .= $cff_date;
-                    //IMAGE
-                    $cff_post_item .= "<img src='{$picture}'/>"; 
                     //POST TEXT
                     if($cff_show_text) $cff_post_item .= $cff_post_text;
+                                //IMAGE
+                    $cff_post_item .= "<img src='{$picture}'/>"; 
                     //DESCRIPTION
                     if($cff_show_desc && $cff_post_type != 'offer' && $cff_post_type != 'link') $cff_post_item .= $cff_description;
                     //LINK
