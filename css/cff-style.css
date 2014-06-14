@@ -188,6 +188,7 @@
 }
 /* Feed events */
 #cff .cff-details{
+  display: block;
   float: left;
   clear: none;
   width: 100%;
