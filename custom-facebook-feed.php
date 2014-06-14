@@ -1128,7 +1128,7 @@ function display_cff($atts) {
                    
                    foreach($news->comments->data as $comment)
                    {
-                         $cff_comment.=cff_name_link($comment->from->name, $comment->from->id);
+                         $cff_comment.=cff_name_picturelink($comment->from->name, $comment->from->id);
                    }
                 
                    }
@@ -1145,7 +1145,7 @@ function display_cff($atts) {
                  }
                     if(!empty($cff_comment))
                     {
-                       $cff_likebox.="<p class='cff-comment-likes cff-comments' style='color:#;background-color:#;'><span class='cff-icon'></span>";
+                       $cff_likebox.="<p class='cff-comment-likes cff-comments' style='color:#;background-color:#;'>";
                        $cff_likebox.=$cff_comment."</p>";
                     }
                     $cff_likebox.="</div>";
@@ -1946,6 +1946,13 @@ function cff_name_link($name, $id)
 {
         return '<a href="http://facebook.com/' . $id . '">' . $name . '</a>';
 }
+
+function cff_name_picturelink($name, $id)
+{
+    return ''<a href="http://facebook.com/' . $id . '">' . <img src="' . 'https://graph.facebook.com/' . $id . '/picture?type=square' .'" title="' . $name . '"alt="'. $name . '"width = 40 height=40>' . $name . '</a>';
+}
+             
+
 ####################################################################
 
 function cff_autolink_email($text, $tagfill=''){
