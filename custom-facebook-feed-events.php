@@ -692,8 +692,8 @@ function events_cff($atts) {
     }
     // End the loop
 
-    //Sort the array in reverse order (newest first)
-    krsort($cff_posts_array);
+    //Sort the array in normal order (oldest first)
+    ksort($cff_posts_array);
 
 
     //Output the posts array
