@@ -1,11 +1,11 @@
 <?php 
 /*
 Plugin Name: Custom Facebook Feed
-Plugin URI: http://smashballoon.com/custom-facebook-feed
+Plugin URI: https://github.com/domabo/custom-facebook-feed/
 Description: Add a completely customizable Facebook feed to your WordPress site
-Version: 1.9.8.1
-Author: Smash Balloon
-Author URI: http://smashballoon.com/
+Version: 1.9.8.1 Domabo
+Author: Smash Balloon / Domabo
+Author URI: http://github.com/domabo
 License: GPLv2 or later
 */
 /* 
@@ -978,6 +978,10 @@ function display_cff($atts) {
                         }
                         //show event date below title
                         if ($cff_event_date_position !== 'above') $cff_event .= $cff_event_date;
+                        //show event cover 
+                        $picture = $event_object->cover->source;
+                        $cff_event .= 'img src="'.picture.'">';
+                        
                         //Show event details
                         if ($cff_show_event_details){
                             //Location
