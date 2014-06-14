@@ -1128,7 +1128,7 @@ function display_cff($atts) {
                    
                    foreach($news->comments->data as $comment)
                    {
-                       $cff_comment.=cff_name_link($comment->from->name, $comment->from->id)
+                //       $cff_comment.=cff_name_link($comment->from->name, $comment->from->id)
                    }
                 
                    }
