@@ -1949,7 +1949,7 @@ function cff_name_link($name, $id)
 
 function cff_name_picturelink($name, $id)
 {
-    return ''<a href="http://facebook.com/' . $id . '">' . <img src="' . 'https://graph.facebook.com/' . $id . '/picture?type=square' .'" title="' . $name . '"alt="'. $name . '"width = 40 height=40>' . $name . '</a>';
+    return '<a href="http://facebook.com/' . $id . '">' . '<img src="https://graph.facebook.com/' . $id . '/picture?type=square" title="' . $name . '" alt="'. $name . '" width="40" height="40">' . $name . '</a>';
 }
              
 
