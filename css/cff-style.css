@@ -328,6 +328,7 @@ time.cff-dateicon *
 {
   display: block;
   float: left;
+  width: 118px;
 }
 
 time.cff-dateicon strong
