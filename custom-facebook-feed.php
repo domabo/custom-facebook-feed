@@ -782,6 +782,7 @@ function display_cff($atts) {
                 if ($cff_title_link) $cff_post_text .= '<a class="cff-post-text-link" href="'.$link.'" '.$target.'>';
                 //Which content should we use?
                 $cff_post_text_type = '';
+                post_text = '';
                 //Use the story
                 if (!empty($news->story)) {
                     $post_text = htmlspecialchars($news->story);
