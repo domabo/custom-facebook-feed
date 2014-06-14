@@ -1148,6 +1148,11 @@ function display_cff($atts) {
                     {
                        $cff_likebox.=$cff_comment;
                     }
+                    
+                    
+                 $cff_likebox.="<p class='cff-comment-likes cff-comment'><a href='https://www.facebook.com/" . $page_id . "/posts/" . $PostID[1] . "'><span class='cff-icon'></span>Comment on Facebook</a>";
+                   
+                    
                     $cff_likebox.="</div>";
                     }
                     
