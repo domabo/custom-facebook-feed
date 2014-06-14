@@ -1,7 +1,7 @@
 <?php 
 
 // Add shortcodes
-add_shortcode('custom-facebook-events', 'events_cff');
+add_shortcode('custom-facebook-events-advanced', 'events_cff');
 function events_cff($atts) {
 //Style options
     $options = get_option('cff_style_settings');
