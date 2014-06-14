@@ -1096,12 +1096,17 @@ function display_cff($atts) {
                     $cff_like_count = count($news->likes->data);
                     if ($cff_like_count > 2)
                     {
-                      foreach ($news->likes->data as $like )
-                      {
-                          $cff_like.=$like->name.", ";
-                      }
-                      $cff_like.=" and ".($cff_like_count-2)." others like this.";
-                    } elseif ($cff_like_count == 2)
+                          $likes = array_values($news->likes->data);
+                          $cff_like.=$likes[0]->name.", ";
+                            $cff_like.=$likes[1]->name." ";
+                            if ($cff_like_count > 3)
+                            {
+                                 $cff_like.="and ".(cff_like_count-2)." others like this."
+                            } else
+                                {
+                                 $cff_like.="and one other like this."
+                            }
+                   } elseif ($cff_like_count == 2)
                     {
                         $likes = array_values($news->likes->data);
                           $cff_like.=$likes[0]->name." and ";
