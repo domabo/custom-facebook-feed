@@ -1116,6 +1116,13 @@ function display_cff($atts) {
                          $cff_comment.=cff_name_picturelink($comment->from->name, $comment->from->id);
                          $cff_comment.=" " . $comment->message;
                             $cff_comment.="</p>";
+                            if ($comment->like_count>0)
+                            {
+                                
+                                $cff_comment.="<p class='cff-comment-likes cff-comment'>". $comment->like_count . " people like this<p>";
+                                
+                            }
+                          
                    }
                 
                    }
