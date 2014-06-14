@@ -272,3 +272,21 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+#cff .cff-icon{
+  display: block;
+  float: left;
+  width: 13px;
+  height: 13px;
+  margin-right: 5px;
+  text-indent: -9999px;
+  background: url('../img/icons.png') no-repeat;
+}
+
+/* Likes */
+#cff .cff-likes .cff-icon{
+  background-position: 0 -17px;
+}
+#cff .dark .cff-likes .cff-icon{
+  background-position: -17px -17px;
+}
