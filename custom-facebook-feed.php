@@ -1131,7 +1131,7 @@ function display_cff($atts) {
                     $cff_post_item.="<div class='cff-comments-box light' >";
                     $cff_post_item.="<p class='cff-comment-likes cff-likes' style='color:#;background-color:#;'><span class='cff-icon'></span>";
                     
-                    foreach ($news->likes as $like )
+                    foreach ($news->likes->data as $like )
                     {
                         $cff_post_item.="TEST";
          
