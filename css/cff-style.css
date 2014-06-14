@@ -320,6 +320,17 @@
   margin: 0 10px 0 0;
 }
 
+#cff .cff-comments-box .cff-time{
+  font-size: 11px;
+  margin-left: 0;
+  display: block;
+  font-style: italic;
+}
+#cff .cff-comment-likes{
+  margin: 5px 0 10px 0;
+  width: 100%;
+}
+
 time.cff-dateicon
 {
   font-size: 1em; /* change icon size */
