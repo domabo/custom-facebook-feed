@@ -190,24 +190,22 @@
 #cff .cff-details{
   padding: 10px 0 0 0;
   overflow: hidden;
-  width: 100%;
+  width: 50%;
   float: left;
   clear: none;
-    display: inline;
 }
 
 .cff-date-image
 {
-  float: left;
-  width: 118px;
-   clear: none;
-   display: inline;
+   width: 118px;
+   clear: both;
+   float: left;
 }
 #cff .cff-details-container{
   display: block;
   clear: both;
   float: left;
-  width: 50%;
+  width: 100%;
   padding: 10px 0 0 0;
 }
 #cff .cff-details h5{
