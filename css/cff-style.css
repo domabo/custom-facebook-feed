@@ -351,16 +351,16 @@ time.cff-dateicon strong
   top: 0;
   padding: 0.4em 0;
   color: #fff;
-  background-color: #3B5998;
-  border-bottom: 1px dashed #f37302;
-  box-shadow: 0 2px 0 #fd9f1b;
+  background-color: #cd5c5c;
+  border-bottom: 1px dashed #cd5c5c;
+  box-shadow: 0 2px 0 #cd5c5c;
 }
 
 time.cff-dateicon em
 {
   position: absolute;
   bottom: 0.3em;
-  color: #3B5998;
+  color: #cd5c5c;
 }
 
 time.cff-dateicon span
