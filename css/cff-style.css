@@ -190,8 +190,9 @@
 #cff .cff-details{
   padding: 10px 0 0 0;
   overflow: hidden;
-  display: inline;
+  float: left;
   clear: none;
+    width: 80%;
 }
 
 .cff-date-image
