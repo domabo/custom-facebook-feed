@@ -2,7 +2,7 @@
 /*** LAYOUT ***/
 /**************/
 
-time.cff-icon
+time.cff-dateicon
 {
   font-size: 1em; /* change icon size */
   display: block;
@@ -16,7 +16,7 @@ time.cff-icon
   overflow: hidden;
 }
 
-time.cff-icon *
+time.cff-dateicon *
 {
   display: block;
   width: 100%;
@@ -26,7 +26,7 @@ time.cff-icon *
   text-align: center;
 }
 
-time.cff-icon strong
+time.cff-dateicon strong
 {
   position: absolute;
   top: 0;
@@ -37,14 +37,14 @@ time.cff-icon strong
   box-shadow: 0 2px 0 #fd9f1b;
 }
 
-time.cff-icon em
+time.cff-dateicon em
 {
   position: absolute;
   bottom: 0.3em;
   color: #fd9f1b;
 }
 
-time.cff-icon span
+time.cff-dateicon span
 {
   width: 100%;
   font-size: 2.8em;
