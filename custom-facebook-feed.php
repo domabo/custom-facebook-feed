@@ -1095,7 +1095,7 @@ function display_cff($atts) {
                     if ($cff_like_count > 2)
                     {
                           $likes = array_values($news->likes->data);
-                          $cff_like.=$likes[0]->name.", ";
+                          $cff_like.= cff_name_link($likes[0]->name, $likes[0]->id) .", ";
                             $cff_like.=$likes[1]->name." ";
                             if ($cff_like_count > 13)
                             {
@@ -1917,6 +1917,11 @@ function cff_autolink_label($text, $limit){
     return $text;
 }
 
+
+function cff_name_link($name, $id)
+{
+        return '<a href="http://facebook.com/' . $id . '">' . $name . '</a>';
+}
 ####################################################################
 
 function cff_autolink_email($text, $tagfill=''){
