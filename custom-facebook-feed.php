@@ -1089,6 +1089,33 @@ function display_cff($atts) {
                 $cff_link = '<a class="' . $cff_viewpost_class . '" href="' . $link . '" title="' . $link_text . '" ' . $target . ' ' . $cff_link_styles . '>' . $link_text . '</a>';
 
 
+                //LIKES AND COMMENTS
+                    $cff_like ="<div class='cff-comments-box light' >";
+                    $cff_like.="<p class='cff-comment-likes cff-likes' style='color:#;background-color:#;'><span class='cff-icon'></span>";
+                    
+                    $cff_like_count = count($news->likes->data);
+                    if ($cff_like_count>2)
+                    {
+                      foreach ($news->likes->data as $like )
+                      {
+                          $cff_like.=$like->name.", "
+                      }
+                      $cff_like.=" and ".($cff_like_count-2)." others like this."
+                    } elseif ($cff_like_count=2)
+                    {
+                        $likes = array_values($news->likes->data);
+                          $cff_like.=$likes[0]->name." and ";
+                            $cff_like.=$likes[1]->name." like this.";
+                    } elseif ($cff_like_count=1)
+                    {
+                         $likes = array_values($news->likes->data);
+                          $cff_like.=$likes[0]->name." likes this.";
+                    } 
+                       
+                    $cff_like.="</p></div>";
+                    
+        
+
                 //**************************//
                 //***CREATE THE POST HTML***//
                 //**************************//
@@ -1124,24 +1151,11 @@ function display_cff($atts) {
                     //VIEW ON FACEBOOK LINK
                     if($cff_show_link) $cff_post_item .= $cff_link;
                     
+                    //LIKES
+                    $cff_post_item .= $cff_like;
                     
                     
                     
-                    //LIKES AND COMMENTS
-                    $cff_post_item.="<div class='cff-comments-box light' >";
-                    $cff_post_item.="<p class='cff-comment-likes cff-likes' style='color:#;background-color:#;'><span class='cff-icon'></span>";
-                    
-                    foreach ($news->likes->data as $like )
-                    {
-                        $cff_post_item.=$like->name.", ";
-         
-                    }
-                    $likes_count = count($news->likes->data);
-                    $cff_post_item.= $likes_count;
-          
-                    $cff_post_item.="</p></div>";
-                    
-                
                 //End the post item
                 $cff_post_item .= '</div>';
 
