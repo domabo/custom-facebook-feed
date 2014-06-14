@@ -290,7 +290,7 @@
 #cff .dark .cff-likes .cff-icon{
   background-position: -17px -17px;
 }
-img.cff-comments
+.cff-comments > img
 {
   vertical-align:text-top;
 }
