@@ -190,8 +190,7 @@
 #cff .cff-details{
   padding: 10px 0 0 0;
   overflow: hidden;
-  width: 50%;
-  float: left;
+  display: inline;
   clear: none;
 }
 
