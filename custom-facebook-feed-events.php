@@ -641,12 +641,7 @@ function events_cff($atts) {
             }
     //show event date below title
             if ($cff_event_date_position !== 'above') $cff_event .= $cff_event_date;
-    //show event cover 
-            $picture = $event_object->cover->source;
-            if ($picture){
-                $cff_event .= '<img src="'.$picture.'">';
-            }
-
+   
     //Show event details
     //Location
             if (!empty($event_object->location)) $cff_event .= '<p class="cff-where" ' . $cff_event_details_styles . '>' . $event_object->location . '</p>';
@@ -672,7 +667,7 @@ function events_cff($atts) {
     //***CREATE THE POST HTML***//
     //**************************//
     //Start the container
-            $cff_post_item = '<div class="cff-item cff-timeline-event>';
+            $cff_post_item = '<div class="cff-item cff-timeline-event">';
     //POST AUTHOR
             if($cff_show_author) $cff_post_item .= $cff_author;
     //DATE ABOVE
