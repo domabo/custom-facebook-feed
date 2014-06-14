@@ -995,7 +995,7 @@ function display_cff($atts) {
                         
                         $cff_event_date = '<p class="cff-date" '.$cff_event_date_styles.'>' . cff_eventdate($dateTime, $cff_event_date_formatting, $cff_event_date_custom) . '</p>';
                         
-                        $cff_event_date_img = '<time datetime="' . date('c', $dateTime). '" class="cff-dateicon"><em>' . date('l', $dateTime) . '</em><strong>'. date('F', $dateTime) . '</strong><span>' . date('j', $dateTime) . '</span></time>';
+                        $cff_event_date_img = '<div class="cff-date-image"><time datetime="' . date('c', $dateTime). '" class="cff-dateicon"><em>' . date('l', $dateTime) . '</em><strong>'. date('F', $dateTime) . '</strong><span>' . date('j', $dateTime) . '</span></time></div>';
                         
                         }
                         //EVENT
