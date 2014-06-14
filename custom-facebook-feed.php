@@ -1192,7 +1192,7 @@ function display_cff($atts) {
                     if($cff_show_event_title || $cff_show_event_details) $cff_post_item .= $cff_event;
                     
                          //PHOTO PICTURE
-                     if ($cff_post_type == 'photo') $cff_post_item .= "<img src='{$picture}' class='cff-shared-link'/>"; 
+                     if ($cff_post_type == 'photo') $cff_post_item .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
                
                     //VIEW ON FACEBOOK LINK
                     if($cff_show_link) $cff_post_item .= $cff_link;
