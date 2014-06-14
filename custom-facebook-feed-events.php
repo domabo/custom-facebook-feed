@@ -523,7 +523,7 @@ function events_cff($atts) {
     $cff_posts_array = array();
 
     //ALL EVENTS
-    $cff_posts_json_url = 'https://graph.facebook.com/' . $page_id . '/' . $graph_query . '?access_token=' . $access_token . '&limit=' . $cff_post_limit . '&locale=' . $cff_locale . $cff_ssl;
+    $cff_posts_json_url = 'https://graph.facebook.com/' . $page_id . '/' . $graph_query . '?until=+60 days&since=today&access_token=' . $access_token . '&limit=' . $cff_post_limit . '&locale=' . $cff_locale . $cff_ssl;
 
     //Don't use caching if the cache time is set to zero
     if ($cff_cache_time != 0){
