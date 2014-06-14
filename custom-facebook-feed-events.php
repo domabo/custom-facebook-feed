@@ -612,12 +612,13 @@ function events_cff($atts) {
             $cff_author .= '</a></div>';
 
     //Event date
+            $cff_sortTime = $post_time;
             isset( $event_object->start_time ) ? $event_time = $event_object->start_time : $event_time = '';
     //If timezone migration is enabled then remove last 5 characters
             if ( strlen($event_time) == 24 ) $event_time = substr($event_time, 0, -5);
             if (!empty($event_time))
             {
-
+                $cff_sortTime=event_time;
                 $dateTime = strtotime($event_time);
 
                 $cff_event_date = '<p class="cff-date" '.$cff_event_date_styles.'>' . cff_eventdate($dateTime, $cff_event_date_formatting, $cff_event_date_custom) . '</p>';
@@ -683,7 +684,7 @@ function events_cff($atts) {
             $cff_post_item .= '</div>';
 
     //PUSH TO ARRAY
-            $cff_posts_array = cff_array_push_assoc($cff_posts_array, strtotime($post_time), $cff_post_item);
+            $cff_posts_array = cff_array_push_assoc($cff_posts_array, strtotime($cff_sortTime), $cff_post_item);
 
         }
     // End post type check
