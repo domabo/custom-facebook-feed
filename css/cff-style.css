@@ -323,14 +323,27 @@
 #cff .cff-comments-box .cff-time{
   font-size: 11px;
   margin-left: 0;
-  display: block;
+  float: left;
   font-style: italic;
 }
 #cff .cff-comment-likes{
   margin: 5px 0 10px 0;
   width: 100%;
+   float: left;
 }
 
+#cff .cff-comments-box .cff-comment-likes b{
+  display: block;
+  float: left;
+  background: url('../img/icons.png') no-repeat;
+  background-position: 0 -50px;
+  width: 10px;
+  height: 9px;
+  margin: 3px 3px 0 3px;
+}
+#cff .cff-comments-box.dark .cff-comment-likes b{
+  background-position: -17px -50px;
+}
 time.cff-dateicon
 {
   font-size: 1em; /* change icon size */
