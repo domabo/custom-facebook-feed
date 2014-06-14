@@ -1121,14 +1121,29 @@ function display_cff($atts) {
                           $cff_like.= cff_name_link($likes[0]->name, $likes[0]->id) ." likes this.";
                    }  
                     
+                   $cff_comment="";
+                   
+                   foreach($news->comments->data as $comment)
+                   {
+                       $cff_comment.=cff_name_link($comment->from->name, $comment->from->id)
+                   }
+                
+                    
+                    
                     $cff_likebox="";
                     if(!empty($cff_like))
                     {
                     $cff_likebox.="<div class='cff-comments-box light' >";
                     $cff_likebox.="<p class='cff-comment-likes cff-likes' style='color:#;background-color:#;'><span class='cff-icon'></span>";
-                    $cff_likebox.=$cff_like;
-                    $cff_likebox.="</p></div>";
+                    $cff_likebox.=$cff_like."</p>";
+                    $cff_likebox.="<p class='cff-comment-likes cff-comments' style='color:#;background-color:#;'><span class='cff-icon'></span>";
+                     $cff_likebox.=$cff_comment."</p>";
+
+                    $cff_likebox.="</div>";
                     }
+                    
+                    
+                    
                     
         
 
