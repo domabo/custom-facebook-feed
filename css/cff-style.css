@@ -189,9 +189,10 @@
 /* Feed events */
 #cff .cff-details{
   display: block;
-  float: right;
+  float: left;
   clear: none;
   padding: 10px 0 0 0;
+  overflow:hidden;
 }
 #cff .cff-details-container{
   display: block;
