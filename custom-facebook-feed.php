@@ -1136,8 +1136,6 @@ function display_cff($atts) {
                     
                     
                     $cff_likebox="";
-                    if(!empty($cff_like) | !empty($cff_comment))
-                    {
                     $cff_likebox.="<div class='cff-comments-box light' >";
                        if(!empty($cff_like))
                  {
@@ -1154,7 +1152,6 @@ function display_cff($atts) {
                    
                     
                     $cff_likebox.="</div>";
-                    }
                     
                     
                 //**************************//
