@@ -1094,24 +1094,24 @@ function display_cff($atts) {
                     $cff_like.="<p class='cff-comment-likes cff-likes' style='color:#;background-color:#;'><span class='cff-icon'></span>";
                     
                     $cff_like_count = count($news->likes->data);
-                    if ($cff_like_count>2)
+                    if ($cff_like_count > 2)
                     {
                       foreach ($news->likes->data as $like )
                       {
                           $cff_like.=$like->name.", "
                       }
-                      $cff_like.=" and ".($cff_like_count-2)." others like this."
-                    } elseif ($cff_like_count=2)
+                      $cff_like.=" and ".($cff_like_count-2)." others like this.";
+                    } elseif ($cff_like_count == 2)
                     {
                         $likes = array_values($news->likes->data);
                           $cff_like.=$likes[0]->name." and ";
                             $cff_like.=$likes[1]->name." like this.";
-                    } elseif ($cff_like_count=1)
+                    } elseif ($cff_like_count == 1)
                     {
                          $likes = array_values($news->likes->data);
                           $cff_like.=$likes[0]->name." likes this.";
-                    } 
-                       
+                    }  
+                    
                     $cff_like.="</p></div>";
                     
         
