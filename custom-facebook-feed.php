@@ -1103,37 +1103,8 @@ function display_cff($atts) {
 
 
                 //LIKES AND COMMENTS
-                   $cff_like="";
-                     $cff_like_count = count($news->likes->data);
-                    if ($cff_like_count > 2)
-                    {
-                          $likes = array_values($news->likes->data);
-                          $cff_like.= cff_name_link($likes[0]->name, $likes[0]->id) .", ";
-                          $cff_like.=cff_name_link($likes[1]->name, $likes[1]->id)." ";
-                            if ($cff_like_count > 13)
-                            {
-                              $cff_like.="and ".($cff_like_count-2)." others like this.";
-                             }
-                            
-                            elseif ($cff_like_count > 3)
-                            {
-                                $cff_like.="and ".convertDigit($cff_like_count-2)." others like this.";
-                   
-                            } else
-                                {
-                                 $cff_like.="and one other like this.";
-                            }
-                   } elseif ($cff_like_count == 2)
-                    {
-                        $likes = array_values($news->likes->data);
-                         $cff_like.= cff_name_link($likes[0]->name, $likes[0]->id) ." and ";
-                          $cff_like.=cff_name_link($likes[1]->name, $likes[1]->id)." like this.";
-                       } elseif ($cff_like_count == 1)
-                    {
-                         $likes = array_values($news->likes->data);
-                          $cff_like.= cff_name_link($likes[0]->name, $likes[0]->id) ." likes this.";
-                   }  
-                    
+                   $cff_like=cff_likes($news->likes->data);
+               
                    $cff_comment="";
                    
                    if($news->comments)
@@ -1937,6 +1908,43 @@ function cff_autolink_do($text, $link_color, $sub, $limit, $tagfill, $auto_title
     $buffer .= substr($text, $cursor);
 
     return $buffer;
+}
+
+
+
+function cff_likes($like_data){
+          $cff_like="";
+                     $cff_like_count = count($like_data);
+                    if ($cff_like_count > 2)
+                    {
+                          $likes = array_values($like_data);
+                          $cff_like.= cff_name_link($likes[0]->name, $likes[0]->id) .", ";
+                          $cff_like.=cff_name_link($likes[1]->name, $likes[1]->id)." ";
+                            if ($cff_like_count > 13)
+                            {
+                              $cff_like.="and ".($cff_like_count-2)." others like this.";
+                             }
+                            
+                            elseif ($cff_like_count > 3)
+                            {
+                                $cff_like.="and ".convertDigit($cff_like_count-2)." others like this.";
+                   
+                            } else
+                                {
+                                 $cff_like.="and one other like this.";
+                            }
+                   } elseif ($cff_like_count == 2)
+                    {
+                        $likes = array_values($like_data);
+                         $cff_like.= cff_name_link($likes[0]->name, $likes[0]->id) ." and ";
+                          $cff_like.=cff_name_link($likes[1]->name, $likes[1]->id)." like this.";
+                       } elseif ($cff_like_count == 1)
+                    {
+                         $likes = array_values($like_data);
+                          $cff_like.= cff_name_link($likes[0]->name, $likes[0]->id) ." likes this.";
+                   }  
+                   
+                   return $cff_like;
 }
 
 ####################################################################
