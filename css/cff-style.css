@@ -266,7 +266,7 @@
 .cff-likebox.bottom.cff-outside{
   margin-top: 10px;
 }
-.clearfix {
+.cff-event-clearfix {
     clear: both;
     display: block;
     height: 0;
