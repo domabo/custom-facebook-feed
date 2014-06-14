@@ -1000,8 +1000,8 @@ function display_cff($atts) {
                         }
                         //EVENT
                         //Display the event details
-                        $cff_event .= '<div class="cff-details">';
                         $cff_event .= $cff_event_date_img;
+                        $cff_event .= '<div class="cff-details">';
                         //show event date above title
                         if ($cff_event_date_position == 'above') $cff_event .= $cff_event_date;
                         //Show event title
