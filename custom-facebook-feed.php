@@ -1106,7 +1106,7 @@ function display_cff($atts) {
                             
                             elseif ($cff_like_count > 3)
                             {
-                                $cff_like.="and ".$convert_digit($cff_like_count-2)." others like this.";
+                                $cff_like.="and ".convertDigit($cff_like_count-2)." others like this.";
                    
                             } else
                                 {
