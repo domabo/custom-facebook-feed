@@ -1090,10 +1090,8 @@ function display_cff($atts) {
 
 
                 //LIKES AND COMMENTS
-                    $cff_like ="<div class='cff-comments-box light' >";
-                    $cff_like.="<p class='cff-comment-likes cff-likes' style='color:#;background-color:#;'><span class='cff-icon'></span>";
-                    
-                    $cff_like_count = count($news->likes->data);
+                   cff_like="";
+                     $cff_like_count = count($news->likes->data);
                     if ($cff_like_count > 2)
                     {
                           $likes = array_values($news->likes->data);
@@ -1123,7 +1121,13 @@ function display_cff($atts) {
                           $cff_like.=$likes[0]->name." likes this.";
                     }  
                     
-                    $cff_like.="</p></div>";
+                    
+                    if($cff_like)
+                    {
+                    $cff_likebox ="<div class='cff-comments-box light' >";
+                    $cff_likebox.="<p class='cff-comment-likes cff-likes' style='color:#;background-color:#;'><span class='cff-icon'></span>";
+                    $cff_likebox.="</p></div>";
+                    }
                     
         
 
@@ -1163,7 +1167,7 @@ function display_cff($atts) {
                     if($cff_show_link) $cff_post_item .= $cff_link;
                     
                     //LIKES
-                    $cff_post_item .= $cff_like;
+                    $cff_post_item .= $cff_likebox;
                     
                     
                     
