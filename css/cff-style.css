@@ -190,7 +190,6 @@
 #cff .cff-details{
   padding: 10px 0 0 0;
   overflow: hidden;
-  display: block;
   width: 100%;
   float: left;
   clear: none;
@@ -198,14 +197,13 @@
 
 .cff-date-image
 {
-  display: block;
   float: left;
   width: 118px;
    clear: none;
 }
 #cff .cff-details-container{
   display: block;
-  clear: none;
+  clear: both;
   float: left;
   width: 50%;
   padding: 10px 0 0 0;
