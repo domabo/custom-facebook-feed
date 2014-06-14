@@ -326,6 +326,7 @@
   float: left;
   font-style: italic;
   width: 80%;
+  clear: both;
 }
 #cff .cff-comment-likes{
   margin: 5px 0 10px 0;
