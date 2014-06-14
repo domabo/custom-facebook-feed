@@ -1123,6 +1123,21 @@ function display_cff($atts) {
                     if($cff_show_event_title || $cff_show_event_details) $cff_post_item .= $cff_event;
                     //VIEW ON FACEBOOK LINK
                     if($cff_show_link) $cff_post_item .= $cff_link;
+                    
+                    
+                    
+                    
+                    //LIKES AND COMMENTS
+                    $cff_post_item.="<div class='cff-comments-box light' >";
+                    $cff_post_item.="<p class='cff-comment-likes cff-likes' style='color:#;background-color:#;'><span class='cff-icon'></span>";
+                    
+                    foreach ($news->likes as $like )
+                    {
+                        $cff_post_item.=$like->name." ";
+         
+                    }
+                    $cff_post_item.="</p></div>";
+                    
                 
                 //End the post item
                 $cff_post_item .= '</div>';
