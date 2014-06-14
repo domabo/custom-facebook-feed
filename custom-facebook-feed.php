@@ -1096,7 +1096,7 @@ function display_cff($atts) {
                     {
                           $likes = array_values($news->likes->data);
                           $cff_like.= cff_name_link($likes[0]->name, $likes[0]->id) .", ";
-                            $cff_like.=$likes[1]->name." ";
+                          $cff_like.=cff_name_link($likes[1]->name, $likes[1]->id)." ";
                             if ($cff_like_count > 13)
                             {
                               $cff_like.="and ".($cff_like_count-2)." others like this.";
@@ -1113,13 +1113,13 @@ function display_cff($atts) {
                    } elseif ($cff_like_count == 2)
                     {
                         $likes = array_values($news->likes->data);
-                          $cff_like.=$likes[0]->name." and ";
-                            $cff_like.=$likes[1]->name." like this.";
-                    } elseif ($cff_like_count == 1)
+                         $cff_like.= cff_name_link($likes[0]->name, $likes[0]->id) ." and ";
+                          $cff_like.=cff_name_link($likes[1]->name, $likes[1]->id)." like this.";
+                       } elseif ($cff_like_count == 1)
                     {
                          $likes = array_values($news->likes->data);
-                          $cff_like.=$likes[0]->name." likes this.";
-                    }  
+                          $cff_like.= cff_name_link($likes[0]->name, $likes[0]->id) ." likes this.";
+                   }  
                     
                     $cff_likebox="";
                     if(!empty($cff_like))
