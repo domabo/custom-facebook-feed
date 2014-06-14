@@ -323,14 +323,14 @@
 #cff .cff-comments-box .cff-time{
   font-size: 11px;
   margin-left: 30px;
-  display: inline;
+  float: left;
   font-style: italic;
   width: 80%;
 }
 #cff .cff-comment-likes{
   margin: 5px 0 10px 0;
   width: 100%;
-  display: inline;
+  float: left;
 }
 #cff .cff-comments-box .cff-comment-likes b{
   float: left;
