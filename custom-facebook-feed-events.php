@@ -645,7 +645,10 @@ function events_cff($atts) {
    
     //Show event details
     //Location
-            if (!empty($event_object->location)) $cff_event .= '<p class="cff-where" ' . $cff_event_details_styles . '>' . $event_object->location . '</p>';
+            if (!empty($event_object->location)) 
+            {
+                $cff_event .= '<p class="cff-where" ' . $cff_event_details_styles . '><a href="https://facebook.com/'. $event_object->venue->id .'">" . $event_object->location . '</a></p>';
+            }
     //Description
             if (!empty($event_object->description)){
                 $description = $event_object->description;
