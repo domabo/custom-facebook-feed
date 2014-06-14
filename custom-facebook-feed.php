@@ -158,7 +158,7 @@ function display_cff($atts) {
         'videoaction' => isset($options[ 'cff_video_action' ]) ? $options[ 'cff_video_action' ] : '',
         'sepcolor' => isset($options[ 'cff_sep_color' ]) ? $options[ 'cff_sep_color' ] : '',
         'sepsize' => isset($options[ 'cff_sep_size' ]) ? $options[ 'cff_sep_size' ] : '',
-
+ 
         //Translate
         'seemoretext' => isset($options[ 'cff_see_more_text' ]) ? $options[ 'cff_see_more_text' ] : '',
         'seelesstext' => isset($options[ 'cff_see_less_text' ]) ? $options[ 'cff_see_less_text' ] : '',
