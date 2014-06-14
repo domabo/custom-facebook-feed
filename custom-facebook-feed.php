@@ -1123,11 +1123,15 @@ function display_cff($atts) {
                     
                    $cff_comment="";
                    
-              /*     foreach($news->comments->data as $comment)
+                   if($news->comments)
+                   {
+                   
+                   foreach($news->comments->data as $comment)
                    {
                        $cff_comment.=cff_name_link($comment->from->name, $comment->from->id)
                    }
-                */
+                
+                   }
                     
                     
                     $cff_likebox="";
