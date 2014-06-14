@@ -27,7 +27,7 @@ include dirname( __FILE__ ) .'/custom-facebook-feed-admin.php';
 include dirname( __FILE__ ) .'/custom-facebook-feed-events.php';
 
 // Add shortcodes
-add_shortcode('custom-facebook-feed-advanced', 'display_cff');
+add_shortcode('custom-facebook-feed', 'display_cff');
 function display_cff($atts) {
     
     //Style options
