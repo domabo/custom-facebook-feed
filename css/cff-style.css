@@ -266,7 +266,13 @@
 .cff-likebox.bottom.cff-outside{
   margin-top: 10px;
 }
-
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 /* Clear fix */
 /*.cff-clear:after {
     clear: both;
