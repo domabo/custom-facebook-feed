@@ -1133,7 +1133,7 @@ function display_cff($atts) {
                     
                     foreach ($news->likes->data as $like )
                     {
-                        $cff_post_item.="TEST";
+                        $cff_post_item.=$like->name." ";
          
                     }
                     $cff_post_item.="</p></div>";
