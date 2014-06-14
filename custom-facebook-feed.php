@@ -1,7 +1,7 @@
 <?php 
 /*
-Plugin Name: Custom Facebook Feed
-Plugin URI: https://github.com/domabo/custom-facebook-feed/
+Plugin Name: Custom Facebook Feed Advanced
+Plugin URI: https://github.com/domabo/custom-facebook-feed-advanced/
 Description: Add a completely customizable Facebook feed to your WordPress site
 Version: 1.9.8.1 Domabo
 Author: Smash Balloon / Domabo
@@ -27,7 +27,7 @@ include dirname( __FILE__ ) .'/custom-facebook-feed-admin.php';
 include dirname( __FILE__ ) .'/custom-facebook-feed-events.php';
 
 // Add shortcodes
-add_shortcode('custom-facebook-feed', 'display_cff');
+add_shortcode('custom-facebook-feed-advanced', 'display_cff');
 function display_cff($atts) {
     
     //Style options
