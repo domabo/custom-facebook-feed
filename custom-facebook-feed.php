@@ -1090,7 +1090,7 @@ function display_cff($atts) {
 
 
                 //LIKES AND COMMENTS
-                   cff_like="";
+                   $cff_like="";
                      $cff_like_count = count($news->likes->data);
                     if ($cff_like_count > 2)
                     {
@@ -1121,10 +1121,10 @@ function display_cff($atts) {
                           $cff_like.=$likes[0]->name." likes this.";
                     }  
                     
-                    
+                    $cff_likebox="";
                     if($cff_like)
                     {
-                    $cff_likebox ="<div class='cff-comments-box light' >";
+                    $cff_likebox.="<div class='cff-comments-box light' >";
                     $cff_likebox.="<p class='cff-comment-likes cff-likes' style='color:#;background-color:#;'><span class='cff-icon'></span>";
                     $cff_likebox.="</p></div>";
                     }
