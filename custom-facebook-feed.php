@@ -745,6 +745,24 @@ function display_cff($atts) {
                         $link = "https://www.facebook.com/" . $page_id . "/posts/" . $PostID[1];
                     }
                 }
+                
+                        /* PICTURE */
+                
+                $picture = $news->picture;
+                
+                 if(stristr(@$picture, '_s.'))
+                 {
+                    $picture = str_replace('_s.', '_n.', @$picture);
+                   }
+
+                   if(stristr(@$picture, 'url='))
+                         {
+                             parse_str($picture, $picturearr);
+                               if($picturearr['url'])
+                                  $picture = $picturearr['url'];
+                            }
+
+      
 
                 //POST AUTHOR
                 $cff_author = '<div class="cff-author"><a href="https://facebook.com/' . $news->from->id . '" '.$target.' title="'.$news->from->name.' on Facebook" '.$cff_author_styles.'>';
@@ -901,6 +919,11 @@ function display_cff($atts) {
                     if($cff_disable_link_box) $cff_shared_link .= ' cff-no-styles"';
                     if(!$cff_disable_link_box) $cff_shared_link .= '" ' . $cff_link_box_styles;
                     $cff_shared_link .= '>';
+                    
+                    //Image
+                    
+                   $cff_shared_link .= "<img src='{$picture}'/>"; 
+            
 
                     //Display link name and description
                     if (!empty($news->description)) {
@@ -1002,23 +1025,7 @@ function display_cff($atts) {
                     }
                 }
                 
-                /* PICTURE */
-                
-                $picture = $news->picture;
-                
-                 if(stristr(@$picture, '_s.'))
-                 {
-                    $picture = str_replace('_s.', '_n.', @$picture);
-                   }
-
-                   if(stristr(@$picture, 'url='))
-                         {
-                             parse_str($picture, $picturearr);
-                               if($picturearr['url'])
-                                  $picture = $picturearr['url'];
-                            }
-
-                /* VIDEO */
+                  /* VIDEO */
 
                 //Check to see whether it's an embedded video so that we can show the name above the post text if necessary
                 $cff_is_video_embed = false;
@@ -1102,8 +1109,6 @@ function display_cff($atts) {
                     if ($cff_show_date && $cff_date_position == 'above') $cff_post_item .= $cff_date;
                     //POST TEXT
                     if($cff_show_text) $cff_post_item .= $cff_post_text;
-                                //IMAGE
-                    $cff_post_item .= "<img src='{$picture}'/>"; 
                     //DESCRIPTION
                     if($cff_show_desc && $cff_post_type != 'offer' && $cff_post_type != 'link') $cff_post_item .= $cff_description;
                     //LINK
