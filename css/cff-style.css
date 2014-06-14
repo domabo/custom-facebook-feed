@@ -333,7 +333,7 @@
   display: inline;
 }
 #cff .cff-comments-box .cff-comment-likes b{
-  display: inline;
+  float: left;
   background: url('../img/icons.png') no-repeat;
   background-position: 0 -50px;
   width: 10px;
