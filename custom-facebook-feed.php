@@ -1000,6 +1000,8 @@ function display_cff($atts) {
                         }
                         //EVENT
                         //Display the event details
+                           $cff_event .= '<div class="cff-details-container">';
+                     
                         $cff_event .= $cff_event_date_img;
                         $cff_event .= '<div class="cff-details">';
                         //show event date above title
@@ -1032,7 +1034,7 @@ function display_cff($atts) {
                                 $cff_event .= '<p class="cff-info" ' . $cff_event_details_styles . '>' . cff_autolink($description, $link_color=str_replace('#', '', $cff_event_link_color) ) . '</p>';
                             }
                         }
-                        $cff_event .= '</div>';
+                        $cff_event .= '</div></div>';
                         
                     }
                 }
