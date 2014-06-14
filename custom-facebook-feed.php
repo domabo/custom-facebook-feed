@@ -1034,7 +1034,7 @@ function display_cff($atts) {
                                 $cff_event .= '<p class="cff-info" ' . $cff_event_details_styles . '>' . cff_autolink($description, $link_color=str_replace('#', '', $cff_event_link_color) ) . '</p>';
                             }
                         }
-                        $cff_event .= '</div><div class="clearfix"></div></div>';
+                        $cff_event .= '</div><div class="cff-event-clearfix"></div></div>';
                         
                     }
                 }
