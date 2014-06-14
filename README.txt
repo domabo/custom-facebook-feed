@@ -1,5 +1,5 @@
 === Custom Facebook Feed ===
-Contributors: smashballoon
+Contributors: smashballoon, domabo
 Tags: Facebook, Facebook feed, Facebook posts, Facebook wall, Facebook events, Facebook page, Facebook group, Facebook Like box, Customizable Facebook Feed, custom, customizable, seo, responsive, mobile, social
 Requires at least: 3.0
 Tested up to: 3.9.1
