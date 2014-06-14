@@ -1122,10 +1122,11 @@ function display_cff($atts) {
                     }  
                     
                     $cff_likebox="";
-                    if($cff_like)
+                    if(!empty($cff_like))
                     {
                     $cff_likebox.="<div class='cff-comments-box light' >";
                     $cff_likebox.="<p class='cff-comment-likes cff-likes' style='color:#;background-color:#;'><span class='cff-icon'></span>";
+                    $cff_likebox.=$cff_like;
                     $cff_likebox.="</p></div>";
                     }
                     
