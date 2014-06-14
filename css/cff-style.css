@@ -191,7 +191,6 @@
   display: block;
   float: right;
   clear: none;
-  width: 100%;
   padding: 10px 0 0 0;
 }
 #cff .cff-details-container{
@@ -335,6 +334,7 @@ time.cff-dateicon *
   display: block;
   float: left;
   width: 118px;
+   clear: none;
 }
 
 time.cff-dateicon strong
