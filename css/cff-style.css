@@ -193,6 +193,7 @@
   width: 100%;
   float: left;
   clear: none;
+    display: inline;
 }
 
 .cff-date-image
@@ -200,6 +201,7 @@
   float: left;
   width: 118px;
    clear: none;
+   display: inline;
 }
 #cff .cff-details-container{
   display: block;
