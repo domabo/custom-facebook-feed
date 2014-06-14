@@ -192,6 +192,16 @@
   overflow: hidden;
   display: block;
   width: 100%;
+  float: left;
+  clear: none;
+}
+
+.cff-date-image
+{
+  display: block;
+  float: left;
+  width: 118px;
+   clear: none;
 }
 #cff .cff-details-container{
   display: block;
@@ -330,13 +340,7 @@ time.cff-dateicon *
   font-style: normal;
   text-align: center;
 }
-.cff-date-image
-{
-  display: block;
-  float: left;
-  width: 118px;
-   clear: none;
-}
+
 
 time.cff-dateicon strong
 {
