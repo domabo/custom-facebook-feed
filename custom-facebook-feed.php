@@ -980,7 +980,7 @@ function display_cff($atts) {
                         if ($cff_event_date_position !== 'above') $cff_event .= $cff_event_date;
                         //show event cover 
                         $picture = $event_object->cover->source;
-                        $cff_event .= 'img src="'.picture.'">';
+                        $cff_event .= 'img src="'.$picture.'">';
                         
                         //Show event details
                         if ($cff_show_event_details){
