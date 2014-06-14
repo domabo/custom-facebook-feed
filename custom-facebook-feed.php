@@ -1101,7 +1101,7 @@ function display_cff($atts) {
                             $cff_like.=$likes[1]->name." ";
                             if ($cff_like_count > 3)
                             {
-                                 $cff_like.="and ".(cff_like_count-2)." others like this.";
+                                 $cff_like.="and ".($cff_like_count-2)." others like this.";
                             } else
                                 {
                                  $cff_like.="and one other like this.";
