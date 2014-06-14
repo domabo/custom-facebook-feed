@@ -322,6 +322,10 @@ time.cff-dateicon *
   font-weight: bold;
   font-style: normal;
   text-align: center;
+}
+.cff-date-image
+{
+  display: block;
   float: left;
 }
 
