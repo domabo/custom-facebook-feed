@@ -189,9 +189,15 @@
 /* Feed events */
 #cff .cff-details{
   display: block;
-  float: left;
+  float: right;
   clear: none;
- /* width: 100%; */
+  width: 100%;
+  padding: 10px 0 0 0;
+}
+#cff .cff-details-container{
+  display: block;
+  clear: none;
+  width: 100%;
   padding: 10px 0 0 0;
 }
 #cff .cff-details h5{
