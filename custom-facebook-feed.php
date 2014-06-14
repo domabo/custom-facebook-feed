@@ -1119,7 +1119,7 @@ function display_cff($atts) {
                             if ($comment->like_count>0)
                             {
                                 $cff_commenttime = cff_timesince(strtotime($comment->created_time));
-                                $cff_comment.="<span class='cff-time'><span class='cff-comment-likes'><b></b>". $comment->like_count . "&nbsp;·&nbsp;" . cff_commenttime ."</span></span>";
+                                $cff_comment.="<span class='cff-time'><span class='cff-comment-likes'><b></b>". $comment->like_count . "&nbsp;·&nbsp;" . $cff_commenttime ."</span></span>";
                                 
                             }
                           
