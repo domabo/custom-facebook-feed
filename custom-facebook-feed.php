@@ -1124,10 +1124,9 @@ function display_cff($atts) {
                             else
                             {
                                 $cff_comment.="<span class='cff-time'><span class='cff-comment-likes'>" . $cff_commenttime ."</span></span>";
-                           
                             }
                             
-                                  $cff_comment.="</p>";
+                          $cff_comment.="</p>";
                       
                           
                    }
@@ -1147,8 +1146,15 @@ function display_cff($atts) {
                        $cff_likebox.=$cff_comment;
                     }
                     
-                    
-                 $cff_likebox.="<p class='cff-comment-likes cff-comment'><a href='https://www.facebook.com/" . $page_id . "/posts/" . $PostID[1] . "'><span class='cff-icon'></span>Comment on Facebook</a>";
+                  if(!empty($cff_comment) |!empty($cff_like))
+                    {
+                       $cff_commentfirst = "Comment on Facebook";
+                    } else
+                    {
+                            $cff_commentfirst = "Be the first to comment on Facebook";
+                    }
+                
+                 $cff_likebox.="<p class='cff-comment-likes cff-comment'><a href='https://www.facebook.com/" . $page_id . "/posts/" . $PostID[1] . "'><span class='cff-icon'></span>" . $cff_commentfirst . "</a>";
                    
                     
                     $cff_likebox.="</div>";
