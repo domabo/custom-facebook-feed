@@ -1115,13 +1115,20 @@ function display_cff($atts) {
                         $cff_comment.="<p class='cff-comment-likes cff-comment'>";
                          $cff_comment.=cff_name_picturelink($comment->from->name, $comment->from->id);
                          $cff_comment.=" " . $comment->message;
-                            $cff_comment.="</p>";
-                            if ($comment->like_count>0)
+                             $cff_commenttime = cff_timesince(strtotime($comment->created_time));
+                       if ($comment->like_count>0)
                             {
-                                $cff_commenttime = cff_timesince(strtotime($comment->created_time));
-                                $cff_comment.="<span class='cff-time'><span class='cff-comment-likes'><b></b>". $comment->like_count . "&nbsp;·&nbsp;" . $cff_commenttime ."</span></span>";
+                               $cff_comment.="<span class='cff-time'><span class='cff-comment-likes'><b></b>". $comment->like_count . "&nbsp;·&nbsp;" . $cff_commenttime ."</span></span>";
                                 
+                            } 
+                            else
+                            {
+                                $cff_comment.="<span class='cff-time'><span class='cff-comment-likes'>" . $cff_commenttime ."</span></span>";
+                           
                             }
+                            
+                                  $cff_comment.="</p>";
+                      
                           
                    }
                 
