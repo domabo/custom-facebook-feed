@@ -53,6 +53,11 @@ time.cff-dateicon span
   color: #2f2f2f;
 }
 
+body .cff-dateicon
+{
+   margin: 10px;
+}
+
 
 /* Feed wrapper */
 .cff-wrapper:after{
