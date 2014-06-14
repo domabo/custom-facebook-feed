@@ -1128,7 +1128,11 @@ function display_cff($atts) {
                    
                    foreach($news->comments->data as $comment)
                    {
+                        $cff_comment.="<p class='cff-comment-likes cff-comment'>";
                          $cff_comment.=cff_name_picturelink($comment->from->name, $comment->from->id);
+                         $cff_comment.=" " . $comment->from->message;
+                            $cff_comment.="</p>";
+               
                    }
                 
                    }
@@ -1145,17 +1149,12 @@ function display_cff($atts) {
                  }
                     if(!empty($cff_comment))
                     {
-                       $cff_likebox.="<p class='cff-comment-likes cff-comments' style='color:#;background-color:#;'>";
-                       $cff_likebox.=$cff_comment."</p>";
+                       $cff_likebox.=$cff_comment;
                     }
                     $cff_likebox.="</div>";
                     }
                     
                     
-                    
-                    
-        
-
                 //**************************//
                 //***CREATE THE POST HTML***//
                 //**************************//
