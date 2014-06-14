@@ -1185,15 +1185,18 @@ function display_cff($atts) {
                     if($cff_show_desc && $cff_post_type != 'offer' && $cff_post_type != 'link') $cff_post_item .= $cff_description;
                     //LINK
                     if($cff_show_shared_links) $cff_post_item .= $cff_shared_link;
+                    
+                                 //PHOTO PICTURE
+                     if ($cff_post_type == 'photo') $cff_post_item .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
+           
+                    
                     //DATE BELOW
                     if ($cff_show_date && $cff_date_position == 'below') $cff_post_item .= $cff_date;
                     
                     //EVENT
                     if($cff_show_event_title || $cff_show_event_details) $cff_post_item .= $cff_event;
                     
-                         //PHOTO PICTURE
-                     if ($cff_post_type == 'photo') $cff_post_item .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
-               
+                
                     //VIEW ON FACEBOOK LINK
                     if($cff_show_link) $cff_post_item .= $cff_link;
                     
