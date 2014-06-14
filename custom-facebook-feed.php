@@ -24,6 +24,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 //Include admin
 include dirname( __FILE__ ) .'/custom-facebook-feed-admin.php';
+include dirname( __FILE__ ) .'/custom-facebook-feed-events.php';
 
 // Add shortcodes
 add_shortcode('custom-facebook-feed', 'display_cff');
