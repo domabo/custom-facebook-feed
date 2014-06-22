@@ -963,7 +963,7 @@ function display_cff($atts) {
                         $cff_shared_link .= '</div>';
                     } else if (!empty($picture))
                     {
-                        $cff_shared_link .= "TEST<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
+                        $cff_shared_link .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
                     }
 
                     $cff_shared_link .= '</div>';
