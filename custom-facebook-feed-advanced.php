@@ -33,7 +33,7 @@ $ip = getenv('HTTP_CLIENT_IP')?:
     getenv('HTTP_FORWARDED')?:
     getenv('REMOTE_ADDR');
 
-if ($ip == "71.228.247.175")
+if ($ip == "71.228.247.175AAAA")
 {
      @ini_set( 'log_errors', 'Off' );
 
@@ -657,7 +657,6 @@ function display_cff($atts) {
         
         //Interpret data with JSON
         $FBdata = json_decode($posts_json);
-        print_r($FBdata);
         //***STARTS POSTS LOOP***
         foreach ($FBdata->data as $news )
         {
