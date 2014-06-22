@@ -950,7 +950,7 @@ function display_cff($atts) {
             
 
                     //Display link name and description
-                    if (!empty($news->description))) {
+                    if (!empty($news->description)) {
                         $cff_shared_link .= '<div class="cff-text-link ';
                         $cff_shared_link .= 'cff-no-image';
                         //The link title:
