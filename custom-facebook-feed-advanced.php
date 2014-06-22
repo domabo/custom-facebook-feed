@@ -950,7 +950,7 @@ function display_cff($atts) {
             
 
                     //Display link name and description
-                    if (!empty($news->description)) {
+                    if (!empty($news->description))) {
                         $cff_shared_link .= '<div class="cff-text-link ';
                         $cff_shared_link .= 'cff-no-image';
                         //The link title:
@@ -961,6 +961,9 @@ function display_cff($atts) {
                             $cff_shared_link .= $cff_description;
                         }
                         $cff_shared_link .= '</div>';
+                    } else if (!empty($picture))
+                    {
+                        $cff_shared_link .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
                     }
 
                     $cff_shared_link .= '</div>';
@@ -1217,9 +1220,7 @@ function display_cff($atts) {
                     //PHOTO PICTURE
                      if ($cff_post_type == 'photo') 
                         $cff_post_item .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
-                    else if (!empty($picture) && empty($cff_description))
-                       $cff_post_item .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
-                    
+                   
                     //DATE BELOW
                     if ($cff_show_date && $cff_date_position == 'below') $cff_post_item .= $cff_date;
                     
