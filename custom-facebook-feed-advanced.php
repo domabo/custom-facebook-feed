@@ -1214,9 +1214,11 @@ function display_cff($atts) {
                     //LINK
                     if($cff_show_shared_links) $cff_post_item .= $cff_shared_link;
                     
-                                 //PHOTO PICTURE
-                     if ($cff_post_type == 'photo') $cff_post_item .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
-           
+                    //PHOTO PICTURE
+                     if ($cff_post_type == 'photo') 
+                        $cff_post_item .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
+                    else if ($picture)
+            $cff_post_item .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
                     
                     //DATE BELOW
                     if ($cff_show_date && $cff_date_position == 'below') $cff_post_item .= $cff_date;
