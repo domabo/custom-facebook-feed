@@ -945,7 +945,7 @@ function display_cff($atts) {
                     $cff_shared_link .= '>';
                     
                     //Image   
-                   $cff_shared_link .= '<img src="{$picture}" alt=""/>'; 
+                   $cff_shared_link .= '<img src="' . $picture .'" alt=""/>'; 
             
 
                     //Display link name and description
