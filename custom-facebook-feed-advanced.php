@@ -657,6 +657,7 @@ function display_cff($atts) {
         
         //Interpret data with JSON
         $FBdata = json_decode($posts_json);
+        print_r($FBdata);
         //***STARTS POSTS LOOP***
         foreach ($FBdata->data as $news )
         {
