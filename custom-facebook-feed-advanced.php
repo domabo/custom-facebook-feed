@@ -944,9 +944,8 @@ function display_cff($atts) {
                     if(!$cff_disable_link_box) $cff_shared_link .= '" ' . $cff_link_box_styles;
                     $cff_shared_link .= '>';
                     
-                    //Image
-                    
-                   $cff_shared_link .= "<img src='{$picture}'/>"; 
+                    //Image   
+                   $cff_shared_link .= '<img src="{$picture}" alt=""/>'; 
             
 
                     //Display link name and description
