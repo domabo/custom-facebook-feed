@@ -1217,7 +1217,7 @@ function display_cff($atts) {
                     //PHOTO PICTURE
                      if ($cff_post_type == 'photo') 
                         $cff_post_item .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
-                    else if (!empty($picture) && empty($cff_shared_link))
+                    else if (!empty($picture) && empty($cff_description))
                        $cff_post_item .= "<div style='float:left; clear: both;'><img src='{$picture}'/></div>";
                     
                     //DATE BELOW
