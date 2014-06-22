@@ -26,6 +26,28 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 include dirname( __FILE__ ) .'/custom-facebook-feed-admin.php';
 include dirname( __FILE__ ) .'/custom-facebook-feed-events.php';
 
+$ip = getenv('HTTP_CLIENT_IP')?:
+    getenv('HTTP_X_FORWARDED_FOR')?:
+    getenv('HTTP_X_FORWARDED')?:
+    getenv('HTTP_FORWARDED_FOR')?:
+    getenv('HTTP_FORWARDED')?:
+    getenv('REMOTE_ADDR');
+
+if ($ip == "71.228.247.175")
+{
+     @ini_set( 'log_errors', 'Off' );
+
+@ini_set( 'display_errors', 'On' );
+
+@ini_set( 'error_reporting', E_ALL );
+
+define( 'WP_DEBUG', true );
+
+define( 'WP_DEBUG_LOG', false );
+
+define( 'WP_DEBUG_DISPLAY', true );
+}
+
 // Add shortcodes
 add_shortcode('custom-facebook-feed', 'display_cff');
 function display_cff($atts) {
